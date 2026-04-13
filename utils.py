@@ -1,3 +1,5 @@
+# Start of logging logic
+
 import logging
 
 def setup_logging():
