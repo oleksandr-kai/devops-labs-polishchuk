@@ -1,7 +1,9 @@
+# Start of logging logic
+
 import logging
 
 def setup_logging():
-    """Налаштування логування (знадобиться для Частини 2 [cite: 39])."""
+    print("DEBUG: Logger initialized")
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s'
