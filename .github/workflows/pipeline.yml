@@ -26,3 +26,16 @@ jobs:
         with:
           name: app-binary
           path: release.txt
+
+  deploy_staging:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-binary
+      - name: Deploy to Staging
+        run: |
+          echo "Deploying to Staging середовище..."
+          cat release.txt
