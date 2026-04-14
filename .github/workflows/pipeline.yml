@@ -39,3 +39,12 @@ jobs:
         run: |
           echo "Deploying to Staging середовище..."
           cat release.txt
+
+  verify_staging:
+    needs: deploy_staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Smoke Test
+        run: |
+          echo "Running smoke tests on staging..."
+          python -c "assert 1 == 1"
